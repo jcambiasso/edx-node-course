@@ -1,0 +1,11 @@
+{
+  "name": "csv-to-json",
+  "version": "1.0.0",
+  "description": "Little module to parse a csv file to a json file.",
+  "main": "csvtojson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
