@@ -9,6 +9,7 @@ const csvtojson = function(data){
     }
     var raw = data.split('\n');
     raw[0] = clearString(raw[0]);
+    raw = raw.filter(data => data !='');
     var categories = raw[0].split(',');
     raw.shift();
     //Taking advantage of ES6 Computed Property names
@@ -25,7 +26,14 @@ const csvtojson = function(data){
         })
         array[index] = customerInfo;
     });
-    result = JSON.stringify(raw);
+    
+    try{
+    result = JSON.stringify(raw,null,2);
+    }
+    catch(error)
+    {
+        console.error(error.meesage);
+    }
     return result;
 }
 
